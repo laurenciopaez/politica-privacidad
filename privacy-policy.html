@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — GymTracker</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 4px; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; }
+    p, li { font-size: 0.97rem; }
+    ul { padding-left: 1.4em; }
+    a { color: #2563eb; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.92rem; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+    th { background: #f5f5f5; }
+    .highlight { background: #f0f7ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  </style>
+</head>
+<body>
+
+<h1>Política de Privacidad</h1>
+<p class="meta">
+  Aplicación: <strong>GymTracker</strong><br />
+  Identificador: <code>com.lpaez.gymtracker</code><br />
+  Última actualización: 16 de marzo de 2026<br />
+  Vigente desde: 16 de marzo de 2026
+</p>
+
+<p>Esta Política de Privacidad describe cómo GymTracker ("<strong>nosotros</strong>", "<strong>la app</strong>" o "<strong>el desarrollador</strong>") recopila, usa, almacena y comparte tu información cuando utilizas nuestra aplicación móvil de seguimiento de entrenamiento. Al instalar o usar GymTracker aceptas las prácticas descritas en este documento.</p>
+
+<h2>1. Datos que recopilamos</h2>
+
+<h3>1.1 Datos que tú proporcionas directamente</h3>
+<ul>
+  <li><strong>Nombre de usuario o nombre para mostrar</strong> — utilizado en el ranking global (solo si participas en la tabla de clasificación).</li>
+  <li><strong>Altura y peso corporal</strong> — ingresados manualmente para calcular estadísticas y graficar progreso.</li>
+  <li><strong>Fotos de progreso corporal</strong> — imágenes opcionales asociadas a entradas de peso (solo disponible para usuarios PRO).</li>
+  <li><strong>Rutinas y ejercicios</strong> — nombre de la rutina, días, ejercicios, series, repeticiones y cargas.</li>
+  <li><strong>Sesiones de entrenamiento completadas</strong> — fecha, ejercicios realizados, series, repeticiones y pesos.</li>
+  <li><strong>Récords personales</strong> — peso máximo y repeticiones por ejercicio.</li>
+</ul>
+
+<h3>1.2 Datos de cuenta (usuarios con Google Sign-In)</h3>
+<ul>
+  <li>Dirección de correo electrónico proporcionada por Google.</li>
+  <li>Nombre asociado a la cuenta de Google.</li>
+  <li>Identificador único de Firebase (UID).</li>
+</ul>
+<p>El inicio de sesión con Google es opcional y requerido únicamente para activar la sincronización en la nube y las funcionalidades PRO.</p>
+
+<h3>1.3 Datos de salud (Health Connect — Android)</h3>
+<div class="highlight">
+  <p>GymTracker puede integrarse con <strong>Android Health Connect</strong> cuando el usuario lo autoriza explícitamente. Los datos de salud que se acceden, leen y escriben son:</p>
+  <ul>
+    <li><strong>Sesiones de ejercicio</strong> (tipo: entrenamiento de fuerza): se exportan al historial de Health Connect al completar un entrenamiento.</li>
+    <li><strong>Calorías totales quemadas</strong>: se calculan de forma aproximada y se exportan a Health Connect.</li>
+    <li><strong>Peso corporal</strong>: se leen registros de peso desde Health Connect (importados de Google Fit, Samsung Health u otras apps compatibles) y se exportan al guardar una entrada de peso en GymTracker.</li>
+  </ul>
+  <p>Esta integración es <strong>completamente opcional</strong>. Puedes activarla o desactivarla desde Perfil &gt; Configuración &gt; Health Connect. Los datos de salud <strong>no se envían a ningún servidor externo</strong> ni a terceros; se mantienen en el dispositivo.</p>
+  <p>Los permisos de Health Connect solicitados son:</p>
+  <ul>
+    <li><code>READ_EXERCISE</code> / <code>WRITE_EXERCISE</code></li>
+    <li><code>READ_TOTAL_CALORIES_BURNED</code> / <code>WRITE_TOTAL_CALORIES_BURNED</code></li>
+    <li><code>READ_WEIGHT</code> / <code>WRITE_WEIGHT</code></li>
+  </ul>
+</div>
+
+<h3>1.4 Datos recopilados automáticamente</h3>
+<ul>
+  <li><strong>Eventos de analítica</strong> (Firebase Analytics): acciones dentro de la app como inicio de sesión de entrenamiento, finalización de rutina, compra PRO, uso de plantillas. Estos eventos no contienen datos personales identificables.</li>
+  <li><strong>Informes de error</strong> (solo usuarios registrados): cuando ocurre un error crítico o alto, se almacena en Firestore la categoría del error, la operación fallida, el mensaje, el stack trace y la plataforma. No incluyen datos biométricos ni de salud.</li>
+  <li><strong>Identificador local anónimo</strong>: un UUID generado en el dispositivo utilizado para el sistema de códigos promocionales. No está vinculado a tu identidad.</li>
+</ul>
+
+<h2>2. Cómo usamos tus datos</h2>
+
+<table>
+  <thead>
+    <tr><th>Dato</th><th>Finalidad</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Rutinas y entrenamientos</td><td>Mostrar tu historial, calcular estadísticas y progresión, generar recomendaciones inteligentes.</td></tr>
+    <tr><td>Peso corporal y altura</td><td>Calcular métricas de progreso y mostrar gráficas.</td></tr>
+    <tr><td>Fotos de progreso</td><td>Visualización personal dentro de la app; almacenadas en tu espacio privado en Firebase Storage.</td></tr>
+    <tr><td>Récords personales + nombre</td><td>Publicar tu posición en el ranking global (opcional, requeres consentimiento implícito al activar el ranking).</td></tr>
+    <tr><td>Correo electrónico y UID</td><td>Autenticar tu cuenta, vincular datos en la nube y gestionar tu suscripción PRO.</td></tr>
+    <tr><td>Datos de Health Connect</td><td>Importar peso desde otras apps y exportar sesiones de entrenamiento al ecosistema de salud del dispositivo.</td></tr>
+    <tr><td>Eventos de analítica</td><td>Mejorar la experiencia de usuario y detectar problemas de rendimiento.</td></tr>
+    <tr><td>Informes de error</td><td>Detectar y corregir errores en la aplicación.</td></tr>
+  </tbody>
+</table>
+
+<p>No usamos tus datos para publicidad personalizada ni los vendemos a terceros.</p>
+
+<h2>3. Almacenamiento y retención de datos</h2>
+
+<h3>3.1 Datos locales (en tu dispositivo)</h3>
+<p>GymTracker almacena la mayoría de los datos en el almacenamiento local de tu dispositivo mediante <strong>AsyncStorage</strong>. Estos datos permanecen en tu dispositivo hasta que:</p>
+<ul>
+  <li>Desinstales la aplicación (los datos se eliminan automáticamente por el sistema operativo).</li>
+  <li>Borres los datos de la app desde los ajustes de Android.</li>
+  <li>Elimines datos manualmente desde dentro de la app.</li>
+</ul>
+
+<h3>3.2 Datos en la nube (Firestore y Firebase Storage)</h3>
+<p>Los usuarios PRO con sesión iniciada tienen sus datos sincronizados en Firebase (Firestore y/o Firebase Storage). Los períodos de retención son:</p>
+
+<table>
+  <thead>
+    <tr><th>Tipo de dato</th><th>Retención en la nube</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Rutinas y entrenamientos</td><td>Mientras la cuenta esté activa. Se eliminan al solicitar la eliminación de cuenta.</td></tr>
+    <tr><td>Peso corporal y fotos de progreso</td><td>Mientras la cuenta esté activa. Se eliminan al solicitar la eliminación de cuenta.</td></tr>
+    <tr><td>Récords personales</td><td>Mientras la cuenta esté activa. Se eliminan al solicitar la eliminación de cuenta.</td></tr>
+    <tr><td>Ranking global</td><td>Mientras la cuenta esté activa. Se elimina al solicitar la eliminación de cuenta o al desactivar el ranking.</td></tr>
+    <tr><td>Datos de suscripción</td><td>Hasta 90 días después del vencimiento de la suscripción, luego se eliminan automáticamente.</td></tr>
+    <tr><td>Informes de error</td><td>90 días desde la fecha del error, luego se eliminan automáticamente.</td></tr>
+    <tr><td>Eventos de analítica (Firebase Analytics)</td><td>63 días según la política estándar de Google Firebase Analytics.</td></tr>
+  </tbody>
+</table>
+
+<h3>3.3 Datos de Health Connect</h3>
+<p>Los datos de salud sincronizados mediante Health Connect se rigen por la política de retención de Health Connect / Google. GymTracker no retiene copias independientes de los datos de Health Connect en sus servidores.</p>
+
+<h2>4. Eliminación de tus datos</h2>
+
+<p>Puedes solicitar la eliminación total de tus datos de las siguientes maneras:</p>
+
+<h3>4.1 Desde la app</h3>
+<ul>
+  <li>Ve a <strong>Perfil &gt; Configuración &gt; Cuenta</strong> y selecciona <em>"Eliminar mi cuenta y todos mis datos"</em>.</li>
+  <li>Esta acción elimina de forma permanente e irreversible todos tus datos de la nube (Firestore y Firebase Storage) y cierra tu sesión.</li>
+  <li>Los datos locales en el dispositivo se eliminan al desinstalar la app.</li>
+</ul>
+
+<h3>4.2 Por correo electrónico</h3>
+<p>Si no puedes acceder a la app, envía un correo con el asunto <em>"Solicitud de eliminación de datos"</em> a <a href="mailto:gymtracker.privacidad@gmail.com">gymtracker.privacidad@gmail.com</a>. Indica el correo electrónico asociado a tu cuenta. Procesaremos tu solicitud en un plazo máximo de <strong>30 días</strong>.</p>
+
+<h3>4.3 Desactivación de Health Connect</h3>
+<p>Para revocar el acceso de GymTracker a Health Connect, ve a <strong>Ajustes del sistema &gt; Health Connect &gt; Permisos de apps</strong> y retira los permisos de GymTracker. Alternativamente, desactiva la integración desde Perfil &gt; Configuración &gt; Health Connect en la app.</p>
+
+<h2>5. Compartición de datos con terceros</h2>
+
+<table>
+  <thead>
+    <tr><th>Proveedor</th><th>Función</th><th>Datos compartidos</th><th>Política</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google Firebase (Firestore, Storage, Auth, Analytics)</td>
+      <td>Base de datos en la nube, almacenamiento de fotos, autenticación, analítica</td>
+      <td>Datos de entrenamiento, fotos, UID, correo, eventos de uso</td>
+      <td><a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></td>
+    </tr>
+    <tr>
+      <td>RevenueCat</td>
+      <td>Gestión de suscripciones y compras in-app</td>
+      <td>Identificador anónimo de usuario, estado de suscripción</td>
+      <td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Google Sign-In</td>
+      <td>Autenticación opcional</td>
+      <td>Correo electrónico y nombre de la cuenta de Google</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+    </tr>
+    <tr>
+      <td>Health Connect (Android)</td>
+      <td>Intercambio de datos de salud en el dispositivo</td>
+      <td>Sesiones de ejercicio, calorías, peso (solo con consentimiento)</td>
+      <td><a href="https://health.google/health-connect-android/" target="_blank">health.google/health-connect-android</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>No compartimos tus datos con otros terceros, anunciantes ni intermediarios de datos.</p>
+
+<h2>6. Seguridad</h2>
+<p>Los datos en la nube están protegidos mediante las reglas de seguridad de Firebase Firestore y Firebase Storage, que garantizan que solo tú puedes acceder a tus propios datos. La comunicación entre la app y los servidores de Firebase se realiza mediante HTTPS/TLS. Las fotos de progreso solo son accesibles con tu autenticación.</p>
+
+<h2>7. Menores de edad</h2>
+<p>GymTracker no está dirigida a menores de 13 años. No recopilamos conscientemente datos personales de menores. Si detectas que un menor ha utilizado la app y ha proporcionado datos personales, contáctanos para eliminarlos.</p>
+
+<h2>8. Cambios en esta política</h2>
+<p>Podemos actualizar esta Política de Privacidad ocasionalmente. Te notificaremos de cambios importantes mediante un aviso en la app o por correo electrónico. La fecha de "Última actualización" al inicio de este documento siempre reflejará la versión vigente.</p>
+
+<h2>9. Contacto</h2>
+<p>Si tienes preguntas, comentarios o solicitudes relacionadas con esta Política de Privacidad, contáctanos:</p>
+<ul>
+  <li>Correo electrónico: <a href="mailto:gymtracker.privacidad@gmail.com">gymtracker.privacidad@gmail.com</a></li>
+</ul>
+
+<hr style="margin-top:3rem;border:none;border-top:1px solid #e0e0e0;" />
+<p style="color:#888;font-size:0.85rem;text-align:center;">© 2026 GymTracker — Todos los derechos reservados</p>
+
+</body>
+</html>
